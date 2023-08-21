@@ -20,7 +20,19 @@ class MainActivity : AppCompatActivity() {
 
         val dial:Button=findViewById<Button>(R.id.dial);
         val no:EditText=findViewById<EditText>(R.id.editTextPhone);
-        dial.setOnClickListener {  }
+        dial.setOnClickListener { dialPhone((no.text.toString())) };
+
+        val cL:Button=findViewById<Button>(R.id.callLog);
+        cL.setOnClickListener { callLog() };
+
+        val g:Button=findViewById<Button>(R.id.gallery)
+        g.setOnClickListener { openGallery() };
+
+        val camera:Button=findViewById<Button>(R.id.camera);
+        camera.setOnClickListener { openCamera() };
+
+        val alarm:Button=findViewById<Button>(R.id.alarm);
+        alarm.setOnClickListener { setAlarm() };
     }
 
     fun openUrl(url:String){
